@@ -12,7 +12,7 @@ def index(request):
     return HttpResponse("Home")
 
 
-def signup_view(request):
+def signupView(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -28,7 +28,7 @@ def signup_view(request):
         return render(request, "accounts/signup.html", {'form': form})
 
 
-def login_view(request):
+def loginView(request):
     if request.method == "POST":
         username = request.POST["username"]
         password = request.POST["password"]
@@ -57,8 +57,22 @@ def modifyProd(request):
     }
     return render(request, 'main/modifyProd.html', context)
 
+def addProd(request):
+    username = request.user.username
+    context = {
+        'products': prodDir.objects.all().get(username=username)
+    }
+    return render(request, 'main/addProd.html', context)
 
-def transHis(resuest):
+def remProd(request):
+    username = request.user.username
+    context = {
+        'products': prodDir.objects.all().get(username=username)
+    }
+    return render(request, 'main/remProd.html', context)
+
+
+def transHisView(request):
     username = request.user.username
     context = {
         'hisData': transHis.objects.all().get(username=username)
