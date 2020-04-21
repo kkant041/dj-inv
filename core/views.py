@@ -9,7 +9,7 @@ from .models import prodDir, transHis
 
 
 def index(request):
-    return HttpResponse("Home")
+    return render(request, "main/index.html")
 
 
 def signupView(request):
@@ -47,7 +47,7 @@ def allProd(request):
     context = {
         'products': prodDir.objects.all().get(username=username)
     }
-    return render(request, 'main/allprod.html', context)
+    return render(request, 'main/allProd.html', context)
 
 
 def modifyProd(request):
