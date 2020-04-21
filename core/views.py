@@ -48,3 +48,19 @@ def allProd(request):
         'products': prodDir.objects.all().get(username=username)
     }
     return render(request, 'main/allprod.html', context)
+
+
+def modifyProd(request):
+    username = request.user.username
+    context = {
+        'products': prodDir.objects.all().get(username=username)
+    }
+    return render(request, 'main/modifyProd.html', context)
+
+
+def transHis(resuest):
+    username = request.user.username
+    context = {
+        'hisData': transHis.objects.all().get(username=username)
+    }
+    return render(request, 'main/transHis.html', context)
