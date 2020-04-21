@@ -27,7 +27,7 @@ class transHis(models.Model):
     # TODO: Define fields here
     prodId = models.ForeignKey(prodDir, on_delete=models.CASCADE)
     transType = models.CharField(max_length=10)
-    price = models.ForeignKey(prodDir, on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
 
     class Meta:
         """Meta definition for transHis."""
