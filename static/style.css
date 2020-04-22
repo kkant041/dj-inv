@@ -13,6 +13,7 @@ header {
 header .logo {
   height: 65px;
   line-height: 65px;
+  width: 149px;
 }
 
 header .logo a {
@@ -28,12 +29,12 @@ header .logo a:hover {
 
 .footer-container {
   width: 100%;
-  background-color: #7fa4b8;
 }
 
 .footer {
-  max-width: 70%;
-  margin: 0px auto;
+  width: 70%;
+  background-color: #7fa4b8;
+  padding: 100px 15% 100px 15%;
 }
 
 .footer-div-1 {
