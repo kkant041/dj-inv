@@ -14,17 +14,50 @@ header .logo {
   height: 65px;
   line-height: 65px;
   width: 149px;
+  float: left;
 }
 
 header .logo a {
   color: #ececec;
   text-decoration: none;
   font-family: cursive;
-  font-size: 32px;
+  font-size: 2em;
 }
 
 header .logo a:hover {
   color: white;
+}
+
+header ul {
+  float: right;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: #ececec;
+  padding: ;
+}
+
+header ul li a:hover{
+    color: #ffffff;
+}
+
+.nav-link-last{
+    color: #ececec;
+}
+
+#nav-bar {
+  color: #ececec;
+  display: none;
+  float: left;
+  font-size: 1.6em;
+  margin-top: 15.7px;
+  cursor: pointer;
 }
 
 .footer-container {
@@ -34,10 +67,14 @@ header .logo a:hover {
 .footer {
   width: 70%;
   background-color: #7fa4b8;
-  padding: 100px 15% 100px 15%;
+  padding: 50px 15% 50px 15%;
+  color: #ececec;
 }
 
 .footer-div-1 {
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px #ececec solid;
 }
 
 .footer-div-1 ul {
@@ -54,4 +91,5 @@ header .logo a:hover {
 
 .footer-div-2 {
   text-align: center;
+  font-size: 0.8em;
 }
