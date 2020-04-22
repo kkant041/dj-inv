@@ -18,13 +18,13 @@ class prodDir(models.Model):
 
     def __str__(self):
         """Unicode representation of prodDir."""
-        return self.prodName, self.numOfPieces, self.buyingPrice, self.sellingPrice, prodDir.totalValue
+        return '%s %s %s %s' % (self.prodName, self.numOfPieces, self.buyingPrice, self.sellingPrice)
 
 class transHis(models.Model):
     """Model definition for transHis."""
 
     # TODO: Define fields here
-    prodId = models.ForeignKey(prodDir, on_delete=models.CASCADE)
+    prodId = models.IntegerField()
     transType = models.CharField(max_length=10)
     price = models.DecimalField(max_digits=5, decimal_places=2)
 
@@ -36,5 +36,5 @@ class transHis(models.Model):
 
     def __str__(self):
         """Unicode representation of transHis."""
-        return self.prodId, self.price, self.transType
+        return '%s %s %s' % (self.prodId, self.price, self.transType)
 
