@@ -1,0 +1,40 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    height: 65px;
+    padding: 0px 100px;
+    background-color: #06669B;
+}
+
+header .logo{
+
+}
+
+.footer{
+    max-width: 70%;
+    margin: 0px auto;
+}
+
+.footer-div-1{
+
+}
+
+.footer-div-1 ul{
+    padding: 0px;
+}
+
+.footer-div-1 ul li{
+    width: 24.5%;
+    margin: 0px auto;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-div-2{
+    text-align: center;
+}

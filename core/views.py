@@ -49,14 +49,6 @@ def allProd(request):
     }
     return render(request, 'main/allProd.html', context)
 
-
-def modifyProd(request):
-    username = request.user.username
-    context = {
-        'products': prodDir.objects.all().get(username=username)
-    }
-    return render(request, 'main/modifyProd.html', context)
-
 def addProd(request):
     username = request.user.username
     context = {

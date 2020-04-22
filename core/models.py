@@ -9,7 +9,6 @@ class prodDir(models.Model):
     numOfPieces = models.PositiveIntegerField(default=0)
     buyingPrice = models.DecimalField(max_digits=5, decimal_places=2)
     sellingPrice = models.DecimalField(max_digits=5, decimal_places=2)
-    totalValue = models.DecimalField
 
     class Meta:
         """Meta definition for prodDir."""
@@ -19,7 +18,7 @@ class prodDir(models.Model):
 
     def __str__(self):
         """Unicode representation of prodDir."""
-        return prodDir.prodName, prodDir.numOfPieces, prodDir.buyingPrice, prodDir.sellingPrice, prodDir.totalValue
+        return self.prodName, self.numOfPieces, self.buyingPrice, self.sellingPrice, prodDir.totalValue
 
 class transHis(models.Model):
     """Model definition for transHis."""
@@ -37,5 +36,5 @@ class transHis(models.Model):
 
     def __str__(self):
         """Unicode representation of transHis."""
-        return transHis.prodId, transHis.price, transHis.transType
+        return self.prodId, self.price, self.transType
 
