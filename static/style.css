@@ -1,40 +1,56 @@
-body{
-    padding: 0px;
-    margin: 0px;
+body {
+  padding: 0px;
+  margin: 0px;
 }
 
-header{
-    height: 65px;
-    padding: 0px 100px;
-    background-color: #06669B;
+header {
+  height: 65px;
+  padding: 0px 100px;
+  background-color: #06669b;
+  position: sticky;
 }
 
-header .logo{
-
+header .logo {
+  height: 65px;
+  line-height: 65px;
 }
 
-.footer{
-    max-width: 70%;
-    margin: 0px auto;
+header .logo a {
+  color: #ececec;
+  text-decoration: none;
+  font-family: cursive;
+  font-size: 32px;
 }
 
-.footer-div-1{
-
+header .logo a:hover {
+  color: white;
 }
 
-.footer-div-1 ul{
-    padding: 0px;
+.footer-container {
+  width: 100%;
+  background-color: #7fa4b8;
 }
 
-.footer-div-1 ul li{
-    width: 24.5%;
-    margin: 0px auto;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    list-style: none;
+.footer {
+  max-width: 70%;
+  margin: 0px auto;
 }
 
-.footer-div-2{
-    text-align: center;
+.footer-div-1 {
+}
+
+.footer-div-1 ul {
+  padding: 0px;
+}
+
+.footer-div-1 ul li {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer-div-2 {
+  text-align: center;
 }
