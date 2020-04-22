@@ -30,6 +30,8 @@ header .logo a:hover {
 
 header ul {
   float: right;
+  margin: 24px 0px 23px 0px;
+  padding: 0px;
 }
 
 header ul li {
@@ -40,7 +42,7 @@ header ul li a {
   text-decoration: none;
   list-style: none;
   color: #ececec;
-  padding: ;
+  margin: 0px 15px;
 }
 
 header ul li a:hover{
@@ -49,6 +51,13 @@ header ul li a:hover{
 
 .nav-link-last{
     color: #ececec;
+    cursor: pointer;
+    padding-left: 15px;
+    border-left:1px #ececec solid;
+}
+
+.nav-link-last:hover{
+    color: #ffffff;
 }
 
 #nav-bar {
