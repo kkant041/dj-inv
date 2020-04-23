@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 class prodDir(models.Model):
@@ -27,6 +28,7 @@ class transHis(models.Model):
     prodId = models.IntegerField()
     transType = models.CharField(max_length=10)
     price = models.DecimalField(max_digits=5, decimal_places=2)
+    transDate = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         """Meta definition for transHis."""

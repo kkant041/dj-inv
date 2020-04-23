@@ -18,15 +18,41 @@ Welcome
 
 <div class="main-body">
     <div class="body-section-1">
-        <ul>
-            
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Number Of Products</th>
+                <th>Buying Value</th>
+                <th>Selling Value</th>
+            </tr>
             {% for product in products %}
-                
+            <tr>
+                <td>{{product.prodName}}</td>
+                <td>{{product.numOfPieces}}</td>
+                <td>{{product.buyingPrice}}</td>
+                <td>{{product.sellingPrice}}</td>
+            </tr>
             {% endfor %}
-                
-        </ul>
+        </table>
     </div>
-    <div class="body-section-2"></div>
+    <div class="body-section-2">
+        <table>
+            <tr>
+                <th>Product Id</th>
+                <th>Transaction Type</th>
+                <th>Value</th>
+                <th>Date</th>
+            </tr>
+            {% for historyElement in history %}
+            <tr>
+                <td>{{historyElement.prodId}}</td>
+                <td>{{historyElement.transType}}</td>
+                <td>{{historyElement.price}}</td>
+                <td>{{historyElement.transDate}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </div>
 
 {% else %}
