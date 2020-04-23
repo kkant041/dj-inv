@@ -9,7 +9,12 @@ from .models import prodDir, transHis
 
 
 def index(request):
-    return render(request, "main/index.html")
+    username = request.user.username
+    context = {
+        'products': prodDir.objects.filter(username=username)[:5],
+        'history': transHis.objects.filter(username=username)[:5]
+    }
+    return render(request, "main/index.html", context)
 
 
 def signupView(request):
